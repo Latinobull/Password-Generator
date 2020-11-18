@@ -20,8 +20,50 @@ var lowerCaseArr = lowerCase.split(" ");
 var upperCase = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 var upperCaseArr = upperCase.split(" ");
 var numbers = "0 1 2 3 4 5 6 7 8 9";
-var numbersArr = numbers.split(" 0");
-var special = "1 @ # $ % ^ & * ( ) - _ + = |  [ ] { } ~ ` < > ? ; '";
+var numbersArr = numbers.split(" ");
+var special = "1 @ # $ % ^ & * ( ) - _ + = | [ ] { } ~ ` < > ? ; '";
 var specialArr = special.split(" ");
+var allChar = [];
+var result = "";
 
+// Password Generator 
+function generatePassword() {
+  //variables to generate the password and causes the reset of the password every press of the button
+allChar.length = 0;
 
+  // Prompt for amount of characters
+  var char = 0; 
+  char = prompt("How many characters do you need?"); 
+  console.log(char);
+    // If user picks invalid number
+    if(char < 8 || char > 50) {
+      alert("Please choose a number between 8 and 50!")
+      char = prompt("How many characters do you need?"); 
+      console.log(char)
+      alert("Please choose a number between 8 and 50! Please press the button again.")
+    }
+    else {
+      //confirm for lowercase
+      if(confirm("Do you want lower case letters in your password?")) {
+        Array.prototype.push.apply(allChar, lowerCaseArr);
+        console.log(allChar);
+
+      }
+      //confirm for uppercase
+      if(confirm("Do you want upper case letters in your password?")) {
+        Array.prototype.push.apply(allChar, upperCaseArr);
+        console.log(allChar);
+      }
+      //confirm for numbers
+      if (confirm("Do you want numbers in your password?")){
+        Array.prototype.push.apply(allChar, numbersArr)
+        console.log(allChar);
+      }
+      //confirm special characters
+      if (confirm("Do you want special characters in your password?")){
+        Array.prototype.push.apply(allChar, specialArr)
+        console.log(allChar);
+      }
+    }
+
+}
