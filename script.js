@@ -64,11 +64,11 @@ result = "";
         Array.prototype.push.apply(allChar, specialArr)
         console.log(allChar);
       }
-
+      // if not confirm was chosen
       if(allChar.length === 0){
         alert("You must select atleast one criteria for your password. Please click the button and try again. :)");
       }
-
+      //random password loop
       else{
         for(var i = 0; i < char; i++) {
           var random = Math.floor(Math.random()*allChar.length);
