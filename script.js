@@ -28,9 +28,9 @@ var result = "";
 
 // Password Generator 
 function generatePassword() {
-  //variables to generate the password and causes the reset of the password every press of the button
+  //a way to reset variables
 allChar.length = 0;
-
+result = "";
   // Prompt for amount of characters
   var char = 0; 
   char = prompt("How many characters do you need?"); 
@@ -64,6 +64,20 @@ allChar.length = 0;
         Array.prototype.push.apply(allChar, specialArr)
         console.log(allChar);
       }
+
+      if(allChar.length === 0){
+        alert("You must select atleast one criteria for your password. Please click the button and try again. :)");
+      }
+
+      else{
+        for(var i = 0; i < char; i++) {
+          var random = Math.floor(Math.random()*allChar.length);
+          result += allChar[random]
+          console.log(result);
+          console.log(allChar);
+        }
+      }
     }
+
 
 }
