@@ -36,7 +36,7 @@ result = "";
   char = prompt("How many characters do you need?"); 
   console.log(char);
     // If user picks invalid number
-    if(char < 8 || char > 128) {
+    if(char < 8 || char > 129) {
       alert("Please choose a number between 8 and 128!")
       char = prompt("How many characters do you need?"); 
       console.log(char)
