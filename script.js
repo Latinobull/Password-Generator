@@ -36,12 +36,12 @@ result = "";
   char = prompt("How many characters do you need?"); 
   console.log(char);
     // If user picks invalid number
-    if(char < 8 || char > 129) {
+    if(char < 8 || char > 129 || isNaN(char)) {
       alert("Please choose a number between 8 and 128!")
       char = prompt("How many characters do you need?"); 
       console.log(char)
     }  
-      if (char < 8 || char > 129) {
+      if (char < 8 || char > 129 || isNaN(char)) {
         alert("Please choose a number between 8 and 128! Please press the button again.")
       }
 
