@@ -36,11 +36,11 @@ result = "";
   char = prompt("How many characters do you need?"); 
   console.log(char);
     // If user picks invalid number
-    if(char < 8 || char > 50) {
-      alert("Please choose a number between 8 and 50!")
+    if(char < 8 || char > 128) {
+      alert("Please choose a number between 8 and 128!")
       char = prompt("How many characters do you need?"); 
       console.log(char)
-      alert("Please choose a number between 8 and 50! Please press the button again.")
+      alert("Please choose a number between 8 and 128! Please press the button again.")
     }
     else {
       //confirm for lowercase
@@ -80,6 +80,6 @@ result = "";
       }
     }
     //Display on screen
-   return result;
+    return result;
 
 }
