@@ -75,9 +75,11 @@ result = "";
           result += allChar[random]
           console.log(result);
           console.log(allChar);
+
         }
       }
     }
-
+    //Display on screen
+   return result;
 
 }
