@@ -16,4 +16,4 @@ You must choose at least one of the criterias for the password to be created. If
 
 https://latinobull.github.io/Password-Generator/
 
-<img src = "assets/front-page.png>
+<img src = "assets/front-page.png">
