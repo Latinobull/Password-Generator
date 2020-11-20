@@ -36,15 +36,22 @@ result = "";
   char = prompt("How many characters do you need?"); 
   console.log(char);
     // If user picks invalid number
+  if (char === null){
+    return
+  }
+
     if(char < 8 || char > 129 || isNaN(char)) {
       alert("Please choose a number between 8 and 128!")
       char = prompt("How many characters do you need?"); 
       console.log(char)
     }  
-      if (char < 8 || char > 129 || isNaN(char)) {
+    if(char === null){
+      return
+    
+      }else if (char < 8 || char > 129 || isNaN(char)) {
         alert("Please choose a number between 8 and 128! Please press the button again.")
+      
       }
-
     else {
       //confirm for lowercase
       if(confirm("Do you want lower case letters in your password?")) {
