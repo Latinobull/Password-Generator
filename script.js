@@ -14,6 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // How the password generator starts
+
 // all variables needed for project
 var lowerCase = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
 var lowerCaseArr = lowerCase.split(" ");
@@ -35,19 +36,21 @@ result = "";
   var char = 0; 
   char = prompt("How many characters do you need?"); 
   console.log(char);
-    // If user picks invalid number
+    // Cancel function when uses picks cancel
   if (char === null){
     return
   }
-
+    // If the character amount is invalid
     if(char < 8 || char > 129 || isNaN(char)) {
       alert("Please choose a number between 8 and 128!")
       char = prompt("How many characters do you need?"); 
       console.log(char)
     }  
+    //cancel function
     if(char === null){
       return
     
+      // If the character amount is invalid two times
       }else if (char < 8 || char > 129 || isNaN(char)) {
         alert("Please choose a number between 8 and 128! Please press the button again.")
       
